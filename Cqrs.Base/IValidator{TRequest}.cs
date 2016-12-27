@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Cqrs.Base
 {
-    public interface IValidator<TRequest>
+    public interface IValidator<in TRequest>
         where TRequest : Request
     {
         Task ValidateAsync(TRequest request);
